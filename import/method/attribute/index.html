@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phương thức xử lý thuộc tính</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        // 1. Click vào a hiển thị lên link của hình ảnh thông qua alert();
+        $(".get_link_img").click(function () {
+          var link_img;
+          link_img = $("img").attr("src");
+          alert(link_img);
+          return false;
+        });
+        $(".removeAttr").click(function () {
+          $("img").removeAttr("src");
+          return false;
+        });
+      });
+    </script>
+    <img src="images/camera-hanh-trinh.jpg" alt="Camera" />
+    <a class="get_link_img" href="#">Lấy Link Ảnh</a>
+    <a class="removeAttr" href="#">Hủy giá trị thuộc tính</a>
+  </body>
+</html>

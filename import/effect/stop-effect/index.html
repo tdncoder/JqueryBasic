@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dừng Hiệu ứng trong Jquery</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <style>
+      #box {
+        width: 400px;
+        padding: 40px;
+        background: #e74c3c;
+        text-align: center;
+        color: #fff;
+        display: none;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("#effect-slideUp").click(function () {
+          $("#box").stop().slideUp(1200);
+        });
+        $("#effect-slideDown").click(function () {
+          $("#box").stop().slideDown(1200);
+        });
+        $("#effect-slideToggle").click(function () {
+          $("#box").stop().slideToggle(1200);
+        });
+      });
+    </script>
+    <h1>Ngăn chặn hàng đợi hiệu ứng JQuery</h1>
+    <a href="#" id="effect-slideUp">slideUp</a>
+    <a href="#" id="effect-slideDown">slideDown</a>
+    <a href="#" id="effect-slideToggle">slideToggle</a>
+    <div id="box"></div>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti dicta
+      at provident reprehenderit, nostrum, facilis porro eos ipsum modi laborum
+      ad iste quis molestias vitae architecto alias inventore quos. Sequi nihil
+      nostrum corrupti fugit in ex eveniet veniam architecto dignissimos! Sed ex
+      voluptatibus possimus, atque alias repellendus. Est vitae earum quaerat
+      reprehenderit possimus doloremque exercitationem enim modi? Tenetur dicta
+      obcaecati provident quasi illum mollitia, vel nam harum consectetur soluta
+      laborum facilis tempore quibusdam facere! Repellendus rem minima expedita
+      placeat exercitationem recusandae suscipit modi doloremque porro. Harum,
+      eligendi incidunt animi ad qui sunt sapiente accusantium exercitationem
+      veritatis nobis dolorem officiis soluta.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cú Pháp Jquery</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        // Thay đổi dữ liệu cho đối tượng nào? => p (selector)
+        // Thay đổi cái gì? => Text (method text jquery)
+
+        // Cách cũ
+        $("p span.first-name").text("Test");
+
+        // Cách 1
+        $(".first-name").text("Tôi");
+        // Cách 2
+        $("span.last-name").text("Là Jquery");
+      });
+    </script>
+    <p>Họ: <span class="first-name"></span></p>
+    <p>Tên: <span class="last-name"></span></p>
+  </body>
+</html>

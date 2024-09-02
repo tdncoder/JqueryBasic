@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sự kiện change trong Jquery</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <style>
+      input,
+      select,
+      textarea {
+        display: block;
+        margin-bottom: 20px;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("#form_input_text").change(function () {
+          alert($(this).val());
+        });
+        $("#form_select").change(function () {
+          alert($(this).val());
+        });
+        $("#form_textarea").change(function () {
+          alert($(this).val());
+        });
+      });
+    </script>
+    <h1>Sự kiện change</h1>
+    <form action="#" method="post">
+      <input type="text" name="form_input_text" id="form_input_text" />
+      <select id="form_select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <textarea name="" id="form_textarea"></textarea>
+    </form>
+  </body>
+</html>

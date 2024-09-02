@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhóm selector theo nội dung Jquery</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        // 1. Tìm phần tử không có nội dung => border: 1px solid #333
+        $("li:empty").text("Không có nội dung").css("border", "1px solid #333");
+        // 2. Tìm các phần tử có chứa nội dung "Phần" cho thành màu đỏ
+        $("li:contains('Phần')").css("color", "red");
+        // 3. Tìm tất cả các phần tử có phần tử con, hoặc có nội dung cho thành màu xanh
+        $("li:parent").css("color", "green"); // Ngược với empty
+        // 4. Tìm phần tử có ít nhất phần tử con là selector cho trước
+        $(".sub:has('.color_red')").css("border", "1px solid red");
+      });
+    </script>
+    <ul>
+      <li>Phần tử 1</li>
+      <li>Phần tử 2</li>
+      <li>Phần tử 3</li>
+      <li>Phần tử 4</li>
+      <li>Phần tử 5</li>
+      <li>
+        <ul class="sub">
+          <li class="color_red">Phần tử 6.1</li>
+          <li>Phần tử 6.2</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>Phần tử 7.1</li>
+          <li>Phần tử 7.2</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

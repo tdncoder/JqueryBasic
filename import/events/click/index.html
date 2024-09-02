@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thêm JQuery vào website</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <style>
+      #target,
+      #other {
+        display: inline-block;
+        padding: 5px;
+        margin: 5px;
+        background: #333;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      #target:hover,
+      #other:hover {
+        background-color: blue;
+        color: #fff;
+        text-decoration: underline;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("#target").click(function () {
+          alert("Target clicked!");
+        });
+        $("#other").click(function () {
+          alert("Other clicked!");
+        });
+      });
+    </script>
+    <h1>Sự kiện Click trong Jquery</h1>
+    <a href="#" id="target">#target</a>
+    <a href="#" id="other">#other</a>
+  </body>
+</html>

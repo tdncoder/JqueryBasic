@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector theo cấu trúc cấp bậc Jquery</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <style>
+      form input {
+        display: block;
+        margin: 10px 0px;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        // 1. Toàn bộ menu cấp 1 thành màu đỏ
+        $("#main-menu > li > a").css("color", "red");
+        // 2. In vào giá trị của input đã có label nếu nó có label phía trên
+        $("form label + input").val("Label");
+        // 3. Toàn bộ những input phía sau label có value "Đứng sau label"
+        $("form label ~ input").val("Đứng sau label");
+      });
+    </script>
+    <ul id="main-menu">
+      <li><a href="">Menu 1</a></li>
+      <li>
+        <a href="">Menu 2</a>
+        <ul class="sub-menu">
+          <li><a href="">Menu 2.1</a></li>
+          <li><a href="">Menu 2.2</a></li>
+          <li><a href="">Menu 2.3</a></li>
+        </ul>
+      </li>
+      <li><a href="">Menu 3</a></li>
+      <li><a href="">Menu 4</a></li>
+      <li><a href="">Menu 5</a></li>
+    </ul>
+    <form action="">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" />
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" />
+    </form>
+  </body>
+</html>

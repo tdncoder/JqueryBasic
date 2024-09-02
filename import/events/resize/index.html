@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thêm JQuery vào website</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        var size_width = $(window).width();
+        $(window).resize(function () {
+          size_width = $(window).width();
+          $("#size_width #result").text(size_width);
+        });
+      });
+    </script>
+    <h1>Sự kiện Resize</h1>
+    <p id="size_width">Độ rộng Web: <span id="result"></span></p>
+  </body>
+</html>

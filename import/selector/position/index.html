@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhóm selector theo định vị Jquery</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        // 1. Chọn phần tử có chỉ số 1 => màu đỏ
+        $("p:eq(1)").css("color", "red");
+        // 2. Chọn phần tử p đầu tiên và cho thành màu xanh
+        $("p:first").css("color", "green");
+        // 3. Chọn phần tử p cuối cùng và cho thành màu xanh nước biển
+        $("p:last").css("color", "blue");
+        // 4. Chọn phần tử p có chỉ số lớn hơn 2 và cho thành màu cyan
+        $("p:gt(2)").css("color", "gray");
+        // 5. Chọn phần tử p có chỉ số bé hơn 3 thành màu vàng
+        $("p:lt(3)").css("color", "yellow");
+        // 6. Chọn phần tử p có chỉ số lẻ thành màu đỏ
+        $("p:odd").css("color", "red");
+        // 7. Chọn các phần tử p có chỉ số chẵn thành màu cam
+        $("p:even").css("color", "orange");
+        // 8. Chọn tất cả các phần tử p ngoại trừ chỉ số 2 thành màu xanh
+        $("p:not(p:eq(2))").css("color", "green");
+      });
+    </script>
+    <p>Đoạn văn 0</p>
+    <p>Đoạn văn 1</p>
+    <p>Đoạn văn 2</p>
+    <p>Đoạn văn 3</p>
+    <p>Đoạn văn 4</p>
+    <p>Đoạn văn 5</p>
+    <p>Đoạn văn 6</p>
+    <div class="box">
+      <p>Đoạn văn 7</p>
+      <p>Đoạn văn 8</p>
+      <p>Đoạn văn 9</p>
+    </div>
+    <a href="">Link 1</a>
+    <a href="">Link 2</a>
+  </body>
+</html>

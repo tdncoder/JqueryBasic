@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sự kiện Submit form trong jquery</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <style>
+      input {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("#target").submit(function () {
+          var username = $("#username").val();
+          var password = $("#password").val();
+          alert("Welcome " + username + "!");
+          return false;
+        });
+      });
+    </script>
+    <h1>Sự kiện submit form</h1>
+    <form id="target" action="" method="post">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" />
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" />
+      <input type="submit" name="btn_login" value="Đăng Nhập" />
+    </form>
+  </body>
+</html>
